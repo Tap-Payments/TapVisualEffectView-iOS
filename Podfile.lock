@@ -1,0 +1,66 @@
+PODS:
+  - TapAdditionsKit/CoreGraphics/CGContext (1.0.4)
+  - TapAdditionsKit/CoreGraphics/CGImage (1.0.4):
+    - TapAdditionsKit/CoreGraphics/CGContext
+  - TapAdditionsKit/CoreGraphics/CGSize (1.0.4):
+    - TapAdditionsKit/SwiftStandartLibrary/Numeric
+  - TapAdditionsKit/Foundation/Bundle (1.0.4)
+  - TapAdditionsKit/Foundation/Locale (1.0.4)
+  - TapAdditionsKit/Foundation/NumberFormatter (1.0.4)
+  - TapAdditionsKit/ObjectiveC/NSObject (1.0.4)
+  - TapAdditionsKit/QuartzCore/CALayer (1.0.4)
+  - TapAdditionsKit/SwiftStandartLibrary/Array (1.0.4):
+    - TapAdditionsKit/SwiftStandartLibrary/Numeric
+  - TapAdditionsKit/SwiftStandartLibrary/Int (1.0.4)
+  - TapAdditionsKit/SwiftStandartLibrary/Numeric (1.0.4)
+  - TapAdditionsKit/SwiftStandartLibrary/Sequence (1.0.4)
+  - TapAdditionsKit/SwiftStandartLibrary/String (1.0.4):
+    - TapAdditionsKit/Foundation/Locale
+    - TapAdditionsKit/Foundation/NumberFormatter
+    - TapAdditionsKit/SwiftStandartLibrary/Int
+  - TapAdditionsKit/Tap/ClassProtocol (1.0.4)
+  - TapAdditionsKit/Tap/TypeAlias (1.0.4)
+  - TapAdditionsKit/UIKit/UIColor (1.0.4):
+    - TapAdditionsKit/SwiftStandartLibrary/Array
+    - TapAdditionsKit/SwiftStandartLibrary/Int
+    - TapAdditionsKit/SwiftStandartLibrary/String
+  - TapAdditionsKit/UIKit/UIDevice (1.0.4)
+  - TapAdditionsKit/UIKit/UIImage (1.0.4):
+    - TapAdditionsKit/CoreGraphics/CGImage
+    - TapAdditionsKit/CoreGraphics/CGSize
+    - TapAdditionsKit/SwiftStandartLibrary/Array
+    - TapAdditionsKit/SwiftStandartLibrary/Sequence
+    - TapAdditionsKit/UIKit/UIColor
+  - TapAdditionsKit/UIKit/UIScreen (1.0.4)
+  - TapAdditionsKit/UIKit/UIView (1.0.4):
+    - TapAdditionsKit/ObjectiveC/NSObject
+    - TapAdditionsKit/QuartzCore/CALayer
+    - TapAdditionsKit/SwiftStandartLibrary/String
+    - TapAdditionsKit/Tap/TypeAlias
+    - TapAdditionsKit/UIKit/UIImage
+    - TapAdditionsKit/UIKit/UIScreen
+  - TapNibView (1.0):
+    - TapAdditionsKit/ObjectiveC/NSObject
+    - TapAdditionsKit/Tap/ClassProtocol
+    - TapAdditionsKit/UIKit/UIView
+
+DEPENDENCIES:
+  - TapAdditionsKit/Foundation/Bundle
+  - TapAdditionsKit/ObjectiveC/NSObject
+  - TapAdditionsKit/UIKit/UIColor
+  - TapAdditionsKit/UIKit/UIDevice
+  - TapAdditionsKit/UIKit/UIView
+  - TapNibView
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TapAdditionsKit
+    - TapNibView
+
+SPEC CHECKSUMS:
+  TapAdditionsKit: b924aba041033ea04e8d78bfa8dc11140f953012
+  TapNibView: 4ddaf1cd09ec3b1ff1315f54c6b7713faa0e3706
+
+PODFILE CHECKSUM: 32e2a2299a00b8de7f5424c3463241e5f4499047
+
+COCOAPODS: 1.5.0

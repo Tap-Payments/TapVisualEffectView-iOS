@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapVisualEffectViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="49f-74-1be">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-2Q-doI" customClass="TapVisualEffectView" customModule="TapVisualEffectView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EiJ-93-uF8">
+                                <rect key="frame" x="20" y="50" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Extra Light"/>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3JP-Bt-i0S"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR2-13-Kfa">
+                                <rect key="frame" x="137.5" y="607" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ebR-0q-KdW"/>
+                                </constraints>
+                                <state key="normal" title="Mask On/Off">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="maskButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T8o-Vb-6cD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="49f-74-1be" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="07v-Xx-UfP"/>
+                            <constraint firstAttribute="trailing" secondItem="EiJ-93-uF8" secondAttribute="trailing" constant="20" id="5PF-1p-l0C"/>
+                            <constraint firstItem="zR2-13-Kfa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6aZ-0R-Mnh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="49f-74-1be" secondAttribute="bottom" id="EG7-A7-p9X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zR2-13-Kfa" secondAttribute="bottom" constant="30" id="Fz7-Ik-Gma"/>
+                            <constraint firstItem="49f-74-1be" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GPh-fW-afK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgQ-2Q-doI" secondAttribute="bottom" id="M1S-nG-KhT"/>
+                            <constraint firstAttribute="trailing" secondItem="kgQ-2Q-doI" secondAttribute="trailing" id="PIJ-4P-dg8"/>
+                            <constraint firstItem="EiJ-93-uF8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ZeU-ra-hCV"/>
+                            <constraint firstAttribute="trailing" secondItem="49f-74-1be" secondAttribute="trailing" id="bka-oa-DNU"/>
+                            <constraint firstItem="EiJ-93-uF8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="bpu-qa-dy6"/>
+                            <constraint firstItem="kgQ-2Q-doI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kSB-R2-uhG"/>
+                            <constraint firstItem="kgQ-2Q-doI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oEc-f6-oKR"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="blurView" destination="kgQ-2Q-doI" id="QY4-eW-DkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="750" height="1334"/>
+    </resources>
+</document>
