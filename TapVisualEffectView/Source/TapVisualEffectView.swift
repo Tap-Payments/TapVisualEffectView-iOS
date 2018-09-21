@@ -5,15 +5,15 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
-import class TapNibView.TapNibView
-import func UIKit.UIAccessibility.UIAccessibilityIsReduceTransparencyEnabled
-import class UIKit.UIColor.UIColor
-import class UIKit.UIDevice.UIDevice
-import class UIKit.UIView.UIView
-import class UIKit.UIVisualEffectView.UIVisualEffectView
+import class    TapNibView.TapNibView
+import struct   UIKit.UIAccessibility.UIAccessibility
+import class    UIKit.UIColor.UIColor
+import class    UIKit.UIDevice.UIDevice
+import class    UIKit.UIView.UIView
+import class    UIKit.UIVisualEffectView.UIVisualEffectView
 
 /// This class watches whether reduce transparency feature is enabled and instead of blur uses opacity with alpha.
-public class TapVisualEffectView: TapNibView {
+public final class TapVisualEffectView: TapNibView {
 
     //MARK: - Public -
     //MARK: Properties
@@ -77,12 +77,12 @@ public class TapVisualEffectView: TapNibView {
     
     private func addTransparencyObserver() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reduceTransparencyStatusDidChange(_:)), name: .UIAccessibilityReduceTransparencyStatusDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reduceTransparencyStatusDidChange(_:)), name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
     }
     
     private func removeTransparencyObserver() {
         
-        NotificationCenter.default.removeObserver(self, name: .UIAccessibilityReduceTransparencyStatusDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
     }
     
     @objc private func reduceTransparencyStatusDidChange(_ notification: NSNotification) {
@@ -96,7 +96,7 @@ public class TapVisualEffectView: TapNibView {
     
     private func updateTransparency() {
         
-        if UIAccessibilityIsReduceTransparencyEnabled() {
+        if UIAccessibility.isReduceTransparencyEnabled {
             
             self.visualEffectView.isHidden = true
             self.contentView?.layer.backgroundColor = self.style.tintColor.cgColor
@@ -116,8 +116,8 @@ public class TapVisualEffectView: TapNibView {
     
     private func updateMask() {
         
-        let viewToApplyMask = UIAccessibilityIsReduceTransparencyEnabled() ? self.contentView : self.visualEffectView
-        let viewToRemoveMask = UIAccessibilityIsReduceTransparencyEnabled() ? self.visualEffectView : self.contentView
+        let viewToApplyMask = UIAccessibility.isReduceTransparencyEnabled ? self.contentView : self.visualEffectView
+        let viewToRemoveMask = UIAccessibility.isReduceTransparencyEnabled ? self.visualEffectView : self.contentView
         
         if UIDevice.current.isRunningIOS9OrLower {
             

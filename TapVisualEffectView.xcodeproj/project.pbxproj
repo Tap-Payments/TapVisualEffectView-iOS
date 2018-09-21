@@ -257,7 +257,7 @@
 					A4D71C681F13CC7C00316991 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = G46S76PUH4;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -346,7 +346,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TapVisualEffectViewExample/Pods-TapVisualEffectViewExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TapVisualEffectViewExample/Pods-TapVisualEffectViewExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TapAdditionsKit/TapAdditionsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/TapNibView/TapNibView.framework",
 			);
@@ -357,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapVisualEffectViewExample/Pods-TapVisualEffectViewExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TapVisualEffectViewExample/Pods-TapVisualEffectViewExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -581,7 +581,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -604,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = company.tap.TapVisualEffectView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
