@@ -2,7 +2,7 @@
 //  TapVisualEffectView.swift
 //  TapVisualEffectView
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 import class    TapNibView.TapNibView
@@ -119,7 +119,7 @@ public final class TapVisualEffectView: TapNibView {
         let viewToApplyMask = UIAccessibility.isReduceTransparencyEnabled ? self.contentView : self.visualEffectView
         let viewToRemoveMask = UIAccessibility.isReduceTransparencyEnabled ? self.visualEffectView : self.contentView
         
-        if UIDevice.current.isRunningIOS9OrLower {
+        if UIDevice.current.tap_isRunningIOS9OrLower {
             
             viewToApplyMask?.layer.mask = self.currentMask?.layer
             viewToRemoveMask?.layer.mask = nil

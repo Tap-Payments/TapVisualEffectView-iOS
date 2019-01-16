@@ -2,7 +2,7 @@
 //  Bundle+Additions.swift
 //  TapVisualEffectView
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 internal extension Bundle {
@@ -12,7 +12,7 @@ internal extension Bundle {
     
     internal static let visualEffectViewResourcesBundle: Bundle = {
         
-        guard let result = Bundle(for: TapVisualEffectView.self).childBundle(named: Constants.visualEffectViewResourcesBundleName) else {
+        guard let result = Bundle(for: TapVisualEffectView.self).tap_childBundle(named: Constants.visualEffectViewResourcesBundleName) else {
             
             fatalError("There is no \(Constants.visualEffectViewResourcesBundleName) bundle.")
         }

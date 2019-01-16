@@ -2,7 +2,7 @@
 //  TapBlurEffectStyle.swift
 //  TapVisualEffectView
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 import class UIKit.UIBlurEffect.UIBlurEffect
@@ -49,15 +49,15 @@ public enum TapBlurEffectStyle {
             
         case .light:
             
-            return .lightBlurTintColor
+            return .tap_lightBlurTintColor
             
         case .extraLight:
             
-            return .extraLightBlurTintColor
+            return .tap_extraLightBlurTintColor
             
         case .dark:
             
-            return .darkBlurTintColor
+            return .tap_darkBlurTintColor
             
         default:
             
