@@ -13,7 +13,7 @@ internal extension Bundle {
     internal static let visualEffectViewResourcesBundle: Bundle = {
         
         guard let result = Bundle(for: TapVisualEffectView.self).tap_childBundle(named: Constants.visualEffectViewResourcesBundleName) else {
-            
+			
             fatalError("There is no \(Constants.visualEffectViewResourcesBundleName) bundle.")
         }
         
