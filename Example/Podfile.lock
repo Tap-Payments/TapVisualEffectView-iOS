@@ -49,24 +49,31 @@ PODS:
     - TapAdditionsKit/ObjectiveC/NSObject (>= 1.3.1)
     - TapAdditionsKit/Tap/ClassProtocol (>= 1.3.1)
     - TapAdditionsKit/UIKit/UIView (>= 1.3.1)
+  - TapVisualEffectView (1.1.1):
+    - TapAdditionsKit/Foundation/Bundle (>= 1.3.1)
+    - TapAdditionsKit/ObjectiveC/NSObject (>= 1.3.1)
+    - TapAdditionsKit/UIKit/UIColor (>= 1.3.1)
+    - TapAdditionsKit/UIKit/UIDevice (>= 1.3.1)
+    - TapAdditionsKit/UIKit/UIView (>= 1.3.1)
+    - TapNibView (>= 1.0.3)
 
 DEPENDENCIES:
-  - TapAdditionsKit/Foundation/Bundle
-  - TapAdditionsKit/ObjectiveC/NSObject
-  - TapAdditionsKit/UIKit/UIColor
-  - TapAdditionsKit/UIKit/UIDevice
-  - TapAdditionsKit/UIKit/UIView
-  - TapNibView
+  - TapVisualEffectView (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - TapAdditionsKit
     - TapNibView
 
+EXTERNAL SOURCES:
+  TapVisualEffectView:
+    :path: "../"
+
 SPEC CHECKSUMS:
   TapAdditionsKit: 4df3330d76ad3ce38816c0a678670d5389607f49
   TapNibView: 018b4b936f09444ccac2bee42a483acae6e586ff
+  TapVisualEffectView: 197e11a5c640b960eff9c5043c3860fdd8a650f1
 
-PODFILE CHECKSUM: 4626e8cb8c7948c8b32d237e66bbba53426ebe29
+PODFILE CHECKSUM: afa706386279ae6128eaccb1c4f23f34b1888bc1
 
 COCOAPODS: 1.7.0.beta.3

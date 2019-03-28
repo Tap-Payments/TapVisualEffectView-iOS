@@ -10,7 +10,7 @@ internal extension Bundle {
     // MARK: - Internal -
     // MARK: Properties
     
-    internal static let visualEffectViewResourcesBundle: Bundle = {
+    static let visualEffectViewResourcesBundle: Bundle = {
         
         guard let result = Bundle(for: TapVisualEffectView.self).tap_childBundle(named: Constants.visualEffectViewResourcesBundleName) else {
 			

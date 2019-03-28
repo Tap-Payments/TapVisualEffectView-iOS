@@ -1,15 +1,15 @@
-TapAdditionsKitDependencyVersion    = '>= 1.2'		unless defined? TapAdditionsKitDependencyVersion
-TapNibViewDependencyVersion         = '>= 1.0.2'	unless defined? TapNibViewDependencyVersion
+TapAdditionsKitDependencyVersion    = '>= 1.3.1'		unless defined? TapAdditionsKitDependencyVersion
+TapNibViewDependencyVersion         = '>= 1.0.3'	unless defined? TapNibViewDependencyVersion
 
 Pod::Spec.new do |tapVisualEffectView|
     
     tapVisualEffectView.platform                = :ios
     tapVisualEffectView.ios.deployment_target   = '8.0'
-    tapVisualEffectView.swift_version           = '4.2'
+    tapVisualEffectView.swift_versions          = ['4.2', '5.0']
     tapVisualEffectView.name                    = 'TapVisualEffectView'
     tapVisualEffectView.summary                 = 'UIVisualEffectView wrapper with support of Reduce Transparency Accessibility feature.'
     tapVisualEffectView.requires_arc            = true
-    tapVisualEffectView.version                 = '1.1'
+    tapVisualEffectView.version                 = '1.1.1'
     tapVisualEffectView.license                 = { :type => 'MIT', :file => 'LICENSE' }
     tapVisualEffectView.author                  = { 'Tap Payments' => 'hello@tap.company' }
     tapVisualEffectView.homepage                = 'https://github.com/Tap-Payments/TapVisualEffectView-iOS'
