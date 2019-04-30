@@ -19,9 +19,3 @@ target 'TapVisualEffectView' do
     shared_pods
 
 end
-
-target 'TapVisualEffectViewExample' do
-
-    shared_pods
-
-end

@@ -72,17 +72,30 @@ public final class TapVisualEffectView: TapNibView {
     @IBOutlet private weak var visualEffectView: UIVisualEffectView!
     
     private var currentMask: UIView?
+	
+	private var transparencyNotificationName: Notification.Name {
+		
+		#if swift(>=4.2)
+		
+		return UIAccessibility.reduceTransparencyStatusDidChangeNotification
+		
+		#else
+		
+		return .UIAccessibilityReduceTransparencyStatusDidChange
+		
+		#endif
+	}
     
     //MARK: Methods
     
     private func addTransparencyObserver() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reduceTransparencyStatusDidChange(_:)), name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(reduceTransparencyStatusDidChange(_:)), name: self.transparencyNotificationName, object: nil)
     }
     
     private func removeTransparencyObserver() {
         
-        NotificationCenter.default.removeObserver(self, name: UIAccessibility.reduceTransparencyStatusDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: self.transparencyNotificationName, object: nil)
     }
     
     @objc private func reduceTransparencyStatusDidChange(_ notification: NSNotification) {

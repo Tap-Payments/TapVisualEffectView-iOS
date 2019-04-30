@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1684471EE256492B2DCC6141 /* Pods_TapVisualEffectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BEECAA8B90B38BF0E9C5BD /* Pods_TapVisualEffectView.framework */; };
 		9898F246F5FA30D2F34D6B66 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		A40DBC88208889A7005B170B /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DBC87208889A7005B170B /* Bundle+Additions.swift */; };
 		A41C32D11F1789E10098C264 /* TapBlurEffectStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41C32D01F1789E10098C264 /* TapBlurEffectStyle.swift */; };
@@ -31,6 +32,7 @@
 		A4D71C761F13D1AF00316991 /* TapVisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapVisualEffectView.swift; sourceTree = "<group>"; };
 		A4D71C781F13D1F200316991 /* TapVisualEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapVisualEffectView.xib; sourceTree = "<group>"; };
 		A970C64BA312C49242ADBAF2 /* Pods-TapVisualEffectViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapVisualEffectViewExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapVisualEffectViewExample/Pods-TapVisualEffectViewExample.release.xcconfig"; sourceTree = "<group>"; };
+		B5BEECAA8B90B38BF0E9C5BD /* Pods_TapVisualEffectView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapVisualEffectView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF867F6CE160032534A68C71 /* Pods_TapVisualEffectViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapVisualEffectViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -41,6 +43,7 @@
 			files = (
 				A47E9BB31F15200A009BE13B /* TapAdditionsKit.framework in Frameworks */,
 				9898F246F5FA30D2F34D6B66 /* (null) in Frameworks */,
+				1684471EE256492B2DCC6141 /* Pods_TapVisualEffectView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +114,7 @@
 			children = (
 				A47E9BB21F15200A009BE13B /* TapAdditionsKit.framework */,
 				DF867F6CE160032534A68C71 /* Pods_TapVisualEffectViewExample.framework */,
+				B5BEECAA8B90B38BF0E9C5BD /* Pods_TapVisualEffectView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,6 +294,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -346,6 +351,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -373,7 +379,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -396,7 +401,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = company.tap.TapVisualEffectView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
